@@ -1,6 +1,6 @@
 import java.io.*; 
 import java.util.*;
-class HelloWorld {
+public class MergeSort {
     public static void main(String[] args) {
   int A[] = {33, 11 ,1, 9,2};
            int s=0;
