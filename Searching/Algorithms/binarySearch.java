@@ -4,6 +4,10 @@
   ii) Access to any element of the data structure takes constant time.
  * 
  *   https://www.geeksforgeeks.org/binary-search/
+ * 
+ * Time complexity of binary search : o(logn)
+ * Space complexity of binary search :o(1)
+ * if we use recursive approach then space complexity is o(logN)
  */
 
 
