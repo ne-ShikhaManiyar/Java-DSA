@@ -21,11 +21,6 @@ All the elements of arr are unique.
  */
 
 
-
-
-
-
-
 import java.util.Arrays;
 
 public class MaxChunks {
