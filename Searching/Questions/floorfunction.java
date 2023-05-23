@@ -10,7 +10,7 @@ floor  greatest ele<=k in arr[]
  */
 
 
-package Questions;
+
 import java.lang.*;
 import java.util.*;
 
