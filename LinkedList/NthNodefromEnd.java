@@ -154,4 +154,15 @@ when list =1 and n=1 we need to return empty
 as we need to return empty list
 
 
+T:C : o(n)
+
+-> Overall, the dominant factor in the time complexity is the second loop, 
+which runs in O(n) time. Therefore, the total time complexity of the code is O(n).
+
+S:C : o(1)
+
+
+The code uses a constant amount of extra space for the slow and fast pointers, 
+regardless of the size of the input linked list. 
+Therefore, the space complexity of the code is O(1).
  */
