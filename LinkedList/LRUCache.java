@@ -3,7 +3,9 @@
 
   https://leetcode.com/problems/lru-cache/description/
 
+LRU cache notes 
 
+https://takeuforward.org/data-structure/implement-lru-cache/
  */
 
 import java.util.*;
