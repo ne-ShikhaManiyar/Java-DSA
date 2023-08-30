@@ -1,6 +1,13 @@
 
+/*
+Worst case = Average Case = Best Case = O(n log n) : TC
+  
+Space Complexity: 
+Since we use an auxiliary array of size at most n to 
+store the merged subarray, the space complexity is O(n).
+ */
 
-import java.io.*; 
+
 import java.util.*;
 public class MergeSort {
     public static void main(String[] args) {
@@ -78,6 +85,8 @@ public class MergeSort {
         for(int i=0;i<C.length;i++)
         {
           A[i+s] = C[i]; //copying sorted ele from new array to original arr
+                         //  A[i + s] represents the position where that element 
+                           //should be inserted back into the original array.
         }
    
         return A;
