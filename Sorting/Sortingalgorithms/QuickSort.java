@@ -1,5 +1,38 @@
+/*
+ 
+https://www.geeksforgeeks.org/quick-sort-vs-merge-sort/
 
-import java.io.*; 
+https://www.geeksforgeeks.org/when-does-the-worst-case-of-quicksort-occur/
+
+Time Complexity:
+Worse case: O(n2)
+When the array is sorted and we choose the leftmost element as pivot,
+ or the array is reverse-sorted and we choose the rightmost element as pivot, 
+ the time complexity becomes quadratic since partitioning the array results 
+ in highly unbalanced subarrays in such cases.
+
+Average case and best case: O(n log n)
+The best case for quick-sort happens when we 
+successfully pick the median element for partitioning every time. 
+Such partitioning allows us to divide the array in half every time. 
+
+
+*Space Complexity
+
+Worst case: O(n)
+This happens when the pivot element is the largest or smallest
+ element of the array in every recursive call. The size of the 
+ subarray after partitioning will be n-1 and 1. In this case,
+  the size of the recursive tree will be n. 
+
+Best case: O(log n)
+This happens when the pivot element’s correct position in the partitioned array
+ is in the middle every time. The size of subarrays will be 
+ half the size of the original array. In this case, the recursive tree’s size will be O(log n). 
+
+ */
+
+
 import java.util.*;
 public class QuickSort {
     public static void main(String[] args) {
@@ -39,19 +72,21 @@ public class QuickSort {
               //unsorted array but after sorting ele on left are 
                //and ele on right are greater
     
-    int pivot = A[l];              //taking out pivot as low ele of array
-    int i =l;                      //taking out a pointers to perform 
+// in this case we choose pivot as lower index
 
-    int j=h;                      //taking out a pointers to perform 
+    int pivot = A[l];              //taking out pivot as low ele of array
+    int i =l;                     // Initialize the pointer i to the low index
+
+    int j=h;                      // Initialize the pointer j to the high index
     
     while(i<j)                  //base condition of QuickSort
     {
-    while(A[i]<=pivot && i<h)   // comparing the ith pointer with pivot if less than pivot 
-     i++;                              //move on to next ele
+    while(A[i]<=pivot && i<h )   /// Loop to find an element greater than the pivot from the left side
+     i++;                             // Move the i pointer to the right
     
     
-    while(A[j]>= pivot && j>l)    // comparing the jth pointer with pivot if greater than pivot 
-      j--;                                //move on to next ele(this loop is from backside)
+    while(A[j]>= pivot && j >l )    // Loop to find an element smaller than the pivot from the right side
+      j--;                                // Move the j pointer to the left
     
     
     if(i<j)                         // if any point i is less than j then swap (A,i,j)
@@ -63,15 +98,16 @@ public class QuickSort {
     }
     }
     
-    if(j!=l)                             //if any point j is not equal to low swap
+    if(j!=l)                          // If the j pointer did not reach the low index
     {
-      int temp = A[j];
+      int temp = A[j];    // Swap the pivot (A[l]) with the element at position j
       A[j] = A[l];
       A[l] = temp;
       
     }
     
-    return j;
+    return j; // Return the new position of the pivot after partitioning
     
 }    
 }
+
