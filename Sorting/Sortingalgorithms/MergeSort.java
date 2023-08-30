@@ -1,6 +1,15 @@
 
 /*
 Worst case = Average Case = Best Case = O(n log n) : TC
+
+Merge sort performs the same number of operations for any input array of a given size.
+
+In this algorithm, we keep dividing the array into two subarrays 
+recursively which will create O(log n) rows where each element is 
+present in each row exactly once. 
+
+For each row, it takes O(n) time to merge every pair of subarrays. 
+So the overall time complexity becomes O(n log n).
   
 Space Complexity: 
 Since we use an auxiliary array of size at most n to 
