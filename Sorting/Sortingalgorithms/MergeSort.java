@@ -60,8 +60,11 @@ public class MergeSort {
                      
         int p3=0; // for new array C 
         
+        // Compare the elements at indices p1 and p2 in the original array A
         while(p1<=mid && p2<=e) // sorting both the breaked arrays
         {
+          
+        // If the element at index p1 is smaller or equal, put it in the merged array C
           if(A[p1]<= A[p2])
           {
             C[p3] = A[p1];
@@ -69,7 +72,7 @@ public class MergeSort {
             p3++;
             
           }
-          else
+          else   // If the element at index p2 is smaller, put it in the merged array C
           {
             C[p3] = A[p2];
             p2++;
