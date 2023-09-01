@@ -13,7 +13,8 @@ public class LongestPalindromicSubstring {
 
     public static void main(String[] args)
     {
-         String A= "aaaabaaa";
+       //  String A= "aaaabaaa";
+          String A= "babad";
          String res = longestPalindrome(A);
          System.out.print(res);
     }
