@@ -10,6 +10,12 @@ public class IsomorphicStrings
 {
     public static void main(String [] args)
     {
+      // String s1 = "foo" ;
+       // String s2 = "bar" ;
+        String s1 = "paper";
+        String s2 ="title";
+        boolean res = Isomorphic(s1, s2);
+        System.out.print(res);
 
     }
 
@@ -30,7 +36,7 @@ public class IsomorphicStrings
         for(int i=0;i<s1;i++)
         {
             char ch1 = s.charAt(i);
-            char ch2 = s.charAt(i);
+            char ch2 = t.charAt(i);
 
             if(h1.containsKey(ch1))  // it checks if hashmap has already mapping for ch1 if yes 
             {
