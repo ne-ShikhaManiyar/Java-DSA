@@ -94,4 +94,18 @@ list to store paths, and calls the solve function to start
 the search from the top-left corner (0, 0).
 
 7)Finally, it returns the list of all paths found.
+
+
+ -> Time Complexity: O(3^(N^2))
+-> At each cell, it has up to 3 choices to make (up, down, left, or right),
+ but in some cases, one or more of these options might be blocked by obstacles in the matrix.
+Therefore, the number of recursive calls made by the algorithm can be as high as 3^(N^2), 
+where N is the number of rows (or columns) in the matrix.
+
+  ->   Space Complexity: O(N*N)
+
+Recursive Call Stack: The recursive function solve
+ is called for each cell in the matrix. In the worst case, 
+ the maximum depth of the recursion is N^2 (as you can visit all cells once), 
+ so the space complexity due to the call stack is O(N^2).
  */
