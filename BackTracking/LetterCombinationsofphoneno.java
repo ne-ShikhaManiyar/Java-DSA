@@ -115,4 +115,16 @@ After all recursive calls have finished, the ans list contains all possible lett
 Return the ans list as the final result.
 
 
+Time complexity
+
+-> Let's assume the input string has n digits, and the maximum number of letters corresponding 
+to a digit is m.
+-> The time complexity is O(m^n), as each digit leads to a branching factor of m,
+ and there are n digits in the input.
+
+
+ Space compleity
+ -> Therefore, the space complexity is O(n) for the recursive call stack 
+ and O(n) for the StringBuilder, resulting in a total space complexity of O(n).
+
  */
