@@ -54,10 +54,11 @@ public class subsets1 {
 
 /*
 
-TC:o(2^N) 
+TC:o(2^N*n) 
 The code generates all possible subsets of the input list A. 
 Since there can be 2^N subsets for a list of size N (where N is the length of the input list A), 
 the time complexity of generating all subsets is O(2^N).
+-> copying the all subsets in the list will be O(N).
 
 SC: 
 
@@ -99,6 +100,34 @@ the result list contains all the subsets.
 The code returns this list as the final result.
 
 
+
+/*
+  
+ Iterative approach
+nums = [1,2,3]
+ public List<List<Integer>> subset(int [] nums)
+ {
+    List<List<Integer>> result = new ArrayList<>(); // powerset contains all set
+    result.add(new ArrayList()); // adding empty subset
+
+    // in this approach we picking empty subset adding up elements in it then again adding in the sets which we got
+    // above approach is called cascading style
+    for(int num : nums){
+    int n = res.size();  // modifying result list 
+    for(int j=0;j<n;j++)
+    {
+        ArrayList<Integer> temp = new ArrayList<>(result.get(j)); // copying empty subset from result list
+        temp.add(nums);// add number  // now we creating [1]
+        result.add(temp) // then again add the susbet in result list
+
+
+    }
+}
+    return result;
+ }
+
+ tc:o(n*2^n)
+sc: o(n*2^n)
  */
   
 
