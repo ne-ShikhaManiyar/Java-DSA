@@ -52,9 +52,9 @@ public class preordertraversal {
 
   preorder travrsal 
 
-  1) always take root node value
-  2)then move to left subtree 
-  3) then move to right subtree
+  1) always take root node value first
+  2)then move to nodes of left subtree 
+  3) then move to nodes of right subtree
 
   Tc: o(N)
 
