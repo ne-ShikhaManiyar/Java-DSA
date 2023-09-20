@@ -63,17 +63,23 @@ public class DiameterofBT
 
     }
 
+    // Function to calculate the diameter of a binary tree
     public static int Diameter(TreeNode root)
     
     {
+        // If the tree is empty or a leaf node, return 0 as there's no diameter
         if(root==null ||(root.left==null && root.right==null))
         return 0;
 
+    // Recursively calculate the diameter of the left and right subtrees
         int left = Diameter(root.left);
         int right = Diameter(root.right);
+
+        // Calculate the diameter passing through the current node (if it exists)
         int mid = height(root.left) + height(root.right);
         if(root.left!=null) mid++;
         if(root.right!=null) mid++;
+         // Return the maximum of left, right, and mid diameters
         int max = Math.max(left,Math.max(right, mid));
         return max;
     }
