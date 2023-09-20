@@ -95,6 +95,18 @@ public class DiameterofBT
 6) we find the max of left,right and mid 
 7) and return the max diameter of binary tree
 
+TC:
 
+The height function has a time complexity of O(N), where N is the number of nodes in the binary tree.
+The Diameter function is recursive and visits each node once, so its time complexity is also O(N).
+
+Space Complexity:
+The space complexityof both the height and Diameter functions is O(H),
+ where H is the height of the binary tree. In the worst case, for a skewed tree, 
+ H can be equal to N, so the space complexity is O(N).
+
+Additional space complexity is incurred by the function call stack during recursion, 
+which is also O(H) or O(N) in the worst case for a skewed tree.
+Overall, the time complexity of the Diameter function is O(N), and the space complexity is O(N).
 
  */
