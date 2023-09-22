@@ -3,6 +3,8 @@
    Question : same tree (100)
 
   https://leetcode.com/problems/same-tree/
+
+  https://www.interviewbit.com/problems/identical-binary-trees/
  */
 
 public class Samebinarytree {
@@ -124,3 +126,23 @@ recursive call stack to traverse the trees.
  */
 
 
+/*
+    // other solution when we have return type has int so we cant use && directly need to store in variable
+
+   public class Solution {
+    public int isSameTree(TreeNode A, TreeNode B) {
+        
+        if(A==null && B==null) return 1;
+        if(A==null || B==null) return 0;
+        if(A.val!=B.val) return 0;
+        
+        int leftresult = isSameTree(A.left,B.left);
+        int rightresult = isSameTree(A.right,B.right);
+        
+        if(leftresult==1 && rightresult== 1)
+        return 1;
+        else return 0;
+    }
+}
+
+ */
