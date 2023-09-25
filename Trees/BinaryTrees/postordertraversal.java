@@ -107,8 +107,6 @@ public class postordertraversal {
 
   Iterative algorithm explanation
 
- 
-
 1) We take an explicit data structure and a root pointer pointing to the root of the tree.
 2)We run a while loop till the time the cur is not pointing to NULL or the stack is non-empty.
 
