@@ -42,26 +42,21 @@ public class inordertraversal {
     {
         
         ArrayList<Integer> ans = new ArrayList<>();
-         Stack<TreeNode> stk = new Stack<>();
-         if(root==null) return ans;
-         if(root!=null) stk.push(root);
-         while(stk.size()>0)
-         {
-            TreeNode temp = stk.peek();
-            if(temp.left!=null) 
-            {
-                stk.push(temp.left);
-                temp.left=null;
-            }
-            
-            else
-            {
-                stk.pop();
-                ans.add(temp.val);
-                if(temp.right!=null) stk.push(temp.right);
-            }
+       if(root==null) return ans;
+       Stack<TreeNode> stk = new Stack<>();
+       TreeNode temp = root;
+       while(!stk.isEmpty() || temp!=null)
+       {
+           while(temp!=null)
+           {
+            stk.push(temp);
+            temp =temp.left;
+           }
 
-         }
+           temp= stk.pop();
+           ans.add(temp.val);
+           temp = temp.right;
+       }
         return ans;
      
 }
@@ -93,4 +88,17 @@ public class inordertraversal {
 
   TC :o(n) it will traverse too all nodes of tree
   SC :o(n) recursive stack + 1dAL
+
+  Explanation of iterative code
+
+  1)use an stack of treenode to store the nodes of tree
+  2) create an temp node so our changes doesnt affect original tree
+  3) check if stack is not empty || temp is not null
+  4)then if temp not null add it in stack
+  5)push the left node inside stack
+  6)as left node or right node may have reach null so pop the stack
+  7) and add it in the ans list
+  8) and then push right node inside stack
+
+
  */
