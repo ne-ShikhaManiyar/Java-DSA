@@ -22,8 +22,8 @@ public class preordertraversal {
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
-        root.right = new TreeNode(2);
-        root.right.left = new TreeNode(3);
+        root.right = new TreeNode(3);
+        root.left = new TreeNode(2);
 
         ArrayList<Integer> result = solve(root);
 
@@ -31,7 +31,33 @@ public class preordertraversal {
         System.out.println(result);
     }
 
-    public static ArrayList<Integer> solve(TreeNode root) {
+    //Iterative solution
+
+     public static ArrayList<Integer> solve(TreeNode root)
+     {
+          ArrayList<Integer> list = new ArrayList<>();
+          if(root==null) return list;
+          Stack<TreeNode> stk = new Stack<>();
+          stk.push(root);
+          while(!stk.isEmpty())
+          {
+              root = stk.pop();
+              list.add(root.val);
+              if(root.right!=null)
+              {
+                stk.push(root.right);
+              }
+              if(root.left!=null)
+              {
+                stk.push(root.left);
+              }
+          }
+          return list;
+     }
+
+    // recursive preorder traversal
+
+   /* public static ArrayList<Integer> solve(TreeNode root) {
         ArrayList<Integer> result = new ArrayList<>();
         preorder(root, result);
         return result;
@@ -44,6 +70,7 @@ public class preordertraversal {
         preorder(root.left, result);
         preorder(root.right, result);
     }
+    */
 }
 
 
@@ -51,6 +78,9 @@ public class preordertraversal {
   explanation of code
 
   preorder travrsal 
+
+
+  Recursive solution
 
   1) always take root node value first
   2)then move to nodes of left subtree 
@@ -65,5 +95,12 @@ public class preordertraversal {
 
 
    SC: o(N) (recursion stack + 1dAL) 
-  
+
+   Iterative solution
+
+   1) stack is required to add nodes
+   2) push root node in stack
+   3) need to add right node first bcoz (stack works as lifo)
+   4) then we add left node in stack
+  5)return the list
  */
