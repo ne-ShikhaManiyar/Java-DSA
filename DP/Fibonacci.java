@@ -11,11 +11,12 @@ public class Fibonacci
     public static void main(String[] args)
     {
 
-        // int n=4;
+       //  int n=4;
         int n=6;
         // int result = fib(n);
-        int res = fibonacci(n);
-         System.out.println(res);
+       // int res = fibonacci(n);
+       int r = fiboTb(n);
+         System.out.println(r);
     }
 
      // Recursive approach to calculate Fibonacci numbers
@@ -64,6 +65,7 @@ public class Fibonacci
     public static int fiboTb(int n)
     {
         int dp[] = new int[n+1];
+        Arrays.fill(dp,-1);
         dp[0] =0;
         dp[1] =1;
         for(int i=2;i<dp.length;i++)
