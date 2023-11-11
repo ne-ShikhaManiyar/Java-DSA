@@ -14,6 +14,10 @@ So the overall time complexity becomes O(n log n).
 Space Complexity: 
 Since we use an auxiliary array of size at most n to 
 store the merged subarray, the space complexity is O(n).
+
+In place : merge sort uses extra array so not inplace algo
+
+stability :  maintain the relative order of records with equal keys
  */
 
 
