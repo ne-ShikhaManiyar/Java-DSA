@@ -83,9 +83,9 @@ public class MiddleElementofLL {
 
  1)Intialise 2 pointers slow and fast 
  2) move slow (1x) and fast (2x) speed
- 3) while condition is such if we have even nodes we dont want our fast.next
-  to be null so fast.next!=null
-  -> And for odd nodes we dont want our fast to be null so used fast!=null
+ 3) while condition is such if we have even nodes we dont want our fast
+  to be null so fast!=null
+  -> And for odd nodes we dont want our fast to be null so used fast.next!=null
   4) we return slow as we found our middle ele 
   5) in even nodes we majorly return right middle ele most times
   for left middle ele we can use fast.next.next!=null
